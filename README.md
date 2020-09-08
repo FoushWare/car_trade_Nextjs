@@ -4,6 +4,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, run the development server:
 
+* 🗄📁🖥 To run the mock-server to imitate there is A Real_Server 💣
+     One one terminal and type:  ⌨ 🔌
+
+```bash
+ npm run mock-server
+  ```
+
+
 ```bash
 npm run dev
 # or
@@ -15,9 +23,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 ## Learn Nextjs by build 🏡🔨 an app 
-:heavy_check_mark:
 - [✔️]  Routes [useRoute]
-- [ ]  Data fetching
+- [✔️]  Data fetching
 - [ ]  Typescript migration
 - [ ]  Api Routes using SQL Database
 - [ ]  material-ui integration + _app and _docment
