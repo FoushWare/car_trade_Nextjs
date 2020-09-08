@@ -1,7 +1,13 @@
 import React ,{useState,useEffect}from 'react';
 import Link from 'next/link';
+import {VehiclePerson} from '../api/VechiclePerson';
 
-export default function List({ownersList}) {
+//🔥There is a convention Here for the Prop in tyescript ..Because 
+// {ownersList }: VehiclePerson[] | undefined    will be understod 🤔 as destructioning of the object VehiclePerson
+export interface ListProps {
+  ownersList: VehiclePerson[] | undefined;
+} 
+export default function List({ownersList }:ListProps) {
 //       const [owners, setOwners] = useState([]);
 //       const [ownersList, setOwnersList] = useState([]);
 
@@ -16,7 +22,7 @@ export default function List({ownersList}) {
 //   }, []);
     return (
         <div>
-      {ownersList.map((e, index) => (
+      {ownersList?.map((e, index) => (
         <div key={index}>
           <Link as={`/${e.vehicle}/${e.ownerName}`} href="/[vehicle]/[person]">
             <a>
@@ -28,9 +34,11 @@ export default function List({ownersList}) {
     </div>
     )
 }
+
+
 //[Alternative to useState , useEffect HOOKS] Nextjs gives us  getinitialprops which return anything .. and this thing can be passed as props 
 List.getInitialProps = async () => {
     const response = await fetch('http://localhost:4001/vehicles');
-    const ownersList = await response.json();
+    const ownersList:VehiclePerson[] | undefined = await response.json();
     return {ownersList: ownersList}
 }

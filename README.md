@@ -25,7 +25,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 ## Learn Nextjs by build 🏡🔨 an app 
 - [✔️]  Routes [useRoute]
 - [✔️]  Data fetching
-- [ ]  Typescript migration
+- [✔️]  Typescript migration
 - [ ]  Api Routes using SQL Database
 - [ ]  material-ui integration + _app and _docment
 - [ ]  Auth for api route with JWT and bcrpt
